@@ -1,0 +1,26 @@
+{
+  "collections": [
+    {
+      "name": "users",
+      "description": "User profiles",
+      "documentId": "uid",
+      "fields": [
+        { "name": "email", "type": "string", "description": "User's email" },
+        { "name": "createdAt", "type": "timestamp", "description": "When the user was created" }
+      ]
+    },
+    {
+      "name": "saved_predictions",
+      "description": "Predictions saved by the user",
+      "documentId": "auto-generated",
+      "fields": [
+        { "name": "userId", "type": "string", "description": "The UID of the user who saved this prediction" },
+        { "name": "market", "type": "string", "description": "The market, e.g., toto" },
+        { "name": "session", "type": "string", "description": "The session time, e.g., 1300" },
+        { "name": "predictionType", "type": "string", "description": "Type of prediction, e.g., 2d-50line" },
+        { "name": "data", "type": "object", "description": "The prediction data" },
+        { "name": "createdAt", "type": "timestamp", "description": "When the prediction was saved" }
+      ]
+    }
+  ]
+}
