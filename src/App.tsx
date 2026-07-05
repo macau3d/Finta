@@ -32,6 +32,7 @@ import ResultPage from "@/pages/result";
 import KalkulatorInvestasiPage from "@/pages/kalkulator-investasi";
 import { FloatingNav } from "@/components/floating-nav";
 import { TopNav } from "@/components/top-nav";
+import { DataSyncToastService } from "@/components/data-sync-toast-service";
 
 import { AINotification } from "@/components/ai-notification";
 
@@ -110,6 +111,7 @@ function App() {
             <Router />
             <FloatingNav />
             <AINotification />
+            <DataSyncToastService />
           </WouterRouter>
           <Toaster />
         </TooltipProvider>
