@@ -78,11 +78,11 @@ export function TopNav() {
           <div className="flex items-center justify-between px-5 py-3">
             {/* Logo & Market Selector */}
             <div className="flex items-center gap-3 shrink-0 relative">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/20 border border-primary/30 shadow-[0_0_20px_rgba(var(--primary),0.2)]">
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/20 border border-primary/30 shadow-[0_0_20px_rgba(var(--primary),0.2)]">
                 <span className="text-xl leading-none">🎰</span>
               </div>
               <div 
-                className="flex flex-col leading-none cursor-pointer"
+                className="flex flex-col leading-none cursor-pointer py-2 pr-2"
                 onClick={() => setActiveDropdown(activeDropdown === 'market' ? null : 'market')}
               >
                 <div className="flex items-center gap-1.5">
@@ -104,7 +104,7 @@ export function TopNav() {
                           setActiveDropdown(null);
                         }}
                         className={cn(
-                          "w-full flex items-center justify-between rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-300 text-left",
+                          "w-full flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-300 text-left",
                           activeMarket === m
                             ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
                             : "text-muted-foreground hover:bg-black/5 dark:hover:bg-white/5 hover:text-foreground"
@@ -299,7 +299,7 @@ export function TopNav() {
               <div className="relative">
                 <button
                   onClick={() => setActiveDropdown(activeDropdown === 'theme' ? null : 'theme')}
-                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-foreground transition-all hover:bg-black/10 dark:hover:bg-white/10 hover:scale-105 active:scale-95"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-foreground transition-all hover:bg-black/10 dark:hover:bg-white/10 hover:scale-105 active:scale-95"
                   aria-label="Customize theme"
                 >
                   <Palette className="h-5 w-5" />
@@ -319,7 +319,7 @@ export function TopNav() {
                             setActiveDropdown(null);
                           }}
                           className={cn(
-                            "w-full flex items-center justify-between rounded-xl px-3 py-2 text-sm font-semibold transition-all duration-300 text-left",
+                            "w-full flex items-center justify-between rounded-xl px-3 py-3 text-sm font-semibold transition-all duration-300 text-left",
                             theme === t.id
                               ? "bg-primary/10 text-primary"
                               : "text-muted-foreground hover:bg-black/5 dark:hover:bg-white/5 hover:text-foreground"
@@ -343,7 +343,7 @@ export function TopNav() {
               {/* Mobile/Tablet hamburger */}
               <button
                 onClick={() => setMenuOpen(true)}
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-foreground transition-all hover:bg-black/10 dark:hover:bg-white/10 hover:scale-105 active:scale-95 lg:hidden"
+                className="flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-foreground transition-all hover:bg-black/10 dark:hover:bg-white/10 hover:scale-105 active:scale-95 lg:hidden"
                 aria-label="Open menu"
               >
                 <Menu className="h-5 w-5" />

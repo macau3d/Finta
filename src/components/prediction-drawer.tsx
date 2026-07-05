@@ -135,7 +135,7 @@ export function PredictionDrawer({ open, onClose }: PredictionDrawerProps) {
                 </div>
                 <button
                   onClick={onClose}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-muted-foreground hover:bg-black/10 dark:hover:bg-white/10 hover:text-foreground transition-all shrink-0"
+                  className="flex h-11 w-11 items-center justify-center rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-muted-foreground hover:bg-black/10 dark:hover:bg-white/10 hover:text-foreground transition-all shrink-0"
                 >
                   <X className="h-5 w-5" />
                 </button>

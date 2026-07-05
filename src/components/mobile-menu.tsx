@@ -370,7 +370,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                 </div>
                 <button
                   onClick={onClose}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-muted-foreground hover:bg-black/10 dark:hover:bg-white/10 hover:text-foreground transition-all shrink-0"
+                  className="flex h-11 w-11 items-center justify-center rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-muted-foreground hover:bg-black/10 dark:hover:bg-white/10 hover:text-foreground transition-all shrink-0"
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -384,7 +384,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                       key={m}
                       onClick={() => setMarket(m)}
                       className={cn(
-                        "px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 whitespace-nowrap",
+                        "px-5 py-3 rounded-xl text-sm font-bold transition-all duration-300 whitespace-nowrap",
                         activeMarket === m
                           ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
                           : "bg-black/5 dark:bg-white/5 text-muted-foreground border border-black/5 dark:border-white/5 hover:bg-black/10 dark:hover:bg-white/10 hover:text-foreground",
@@ -558,7 +558,7 @@ const NavItem: React.FC<{
 <a
         className={cn(
           "w-full flex items-center gap-4 transition-all duration-200 text-left rounded-[1.25rem]",
-          isSubItem ? "px-3 py-3" : "px-4 py-4",
+          isSubItem ? "px-4 py-3.5" : "px-4 py-4",
           isActive
             ? "bg-primary/5 dark:bg-primary/10 border border-primary/10 dark:border-primary/20 shadow-inner"
             : "hover:bg-black/5 dark:hover:bg-white/5 active:bg-black/10 dark:active:bg-white/10 border border-transparent bg-black/[0.02] dark:bg-white/[0.02]",

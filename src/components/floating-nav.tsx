@@ -45,7 +45,7 @@ export function FloatingNav() {
                 <Link key={item.href} href={item.href} asChild>
 <a
                     className={cn(
-                      "relative flex w-full flex-col items-center justify-center gap-1.5 px-1 py-3 transition-all duration-300 rounded-[1.25rem]",
+                      "relative flex w-full flex-col items-center justify-center gap-1.5 px-1 py-3.5 sm:py-4 transition-all duration-300 rounded-[1.25rem]",
                       isActive 
                         ? "bg-primary/10 dark:bg-primary/15 text-primary shadow-inner border border-primary/20" 
                         : "text-muted-foreground hover:bg-black/5 dark:hover:bg-white/5 border border-transparent"
@@ -91,7 +91,7 @@ export function FloatingNav() {
             <button
               onClick={handleOpenPrediksi}
               className={cn(
-                "relative flex w-full flex-col items-center justify-center gap-1.5 px-1 py-3 transition-all duration-300 rounded-[1.25rem]",
+                "relative flex w-full flex-col items-center justify-center gap-1.5 px-1 py-3.5 sm:py-4 transition-all duration-300 rounded-[1.25rem]",
                 isPrediksiActive 
                   ? "bg-primary/10 dark:bg-primary/15 text-primary shadow-inner border border-primary/20" 
                   : "text-muted-foreground hover:bg-black/5 dark:hover:bg-white/5 border border-transparent"
@@ -123,7 +123,7 @@ export function FloatingNav() {
             <Link href="/analisa-harian" asChild>
 <a
                 className={cn(
-                  "relative flex w-full flex-col items-center justify-center gap-1.5 px-1 py-3 transition-all duration-300 rounded-[1.25rem]",
+                  "relative flex w-full flex-col items-center justify-center gap-1.5 px-1 py-3.5 sm:py-4 transition-all duration-300 rounded-[1.25rem]",
                   location === "/analisa-harian" 
                     ? "bg-primary/10 dark:bg-primary/15 text-primary shadow-inner border border-primary/20" 
                     : "text-muted-foreground hover:bg-black/5 dark:hover:bg-white/5 border border-transparent"
@@ -152,7 +152,7 @@ export function FloatingNav() {
             {/* Lainnya Button */}
             <button
               onClick={handleOpenMenu}
-              className="relative flex w-full flex-col items-center justify-center gap-1.5 px-1 py-3 transition-all duration-300 rounded-[1.25rem] text-muted-foreground hover:bg-black/5 dark:hover:bg-white/5 border border-transparent"
+              className="relative flex w-full flex-col items-center justify-center gap-1.5 px-1 py-3.5 sm:py-4 transition-all duration-300 rounded-[1.25rem] text-muted-foreground hover:bg-black/5 dark:hover:bg-white/5 border border-transparent"
             >
               <span className="relative">
                 <Menu className="h-[22px] w-[22px] sm:h-6 sm:w-6 transition-all duration-300 text-muted-foreground/80" strokeWidth={2} />
