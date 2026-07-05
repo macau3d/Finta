@@ -194,10 +194,10 @@ export default function BesarPage() {
                 <Badge variant="outline" className="text-[11px] bg-red-500/10 border-red-500/20 text-red-400">Total Besar: {totalHit}</Badge>
               </div>
               <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-muted-foreground/20">
-                <table className="w-full text-sm table-auto min-w-[320px]">
+                <table className="w-full text-sm table-auto min-w-[500px]">
                   <thead>
                     <tr className="bg-muted/40">
-                      <th className="sticky left-0 z-10 bg-muted-header border-r border-border/40 px-1 py-1.5 text-left text-[10px] font-medium text-muted-foreground sm:px-3 sm:text-xs w-[52px] sm:w-auto" style={{ backgroundColor: "var(--color-bg-muted-header, rgb(24, 24, 27))" }}>
+                      <th className="sticky left-0 z-10 bg-muted-header border-r border-border/40 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)] px-1 py-1.5 text-left text-[10px] font-medium text-muted-foreground sm:px-3 sm:text-xs w-[52px] sm:w-auto" style={{ backgroundColor: "var(--color-bg-muted-header, rgb(24, 24, 27))" }}>
                         Tanggal
                       </th>
                       {displayedTimes.map((t) => (
@@ -214,7 +214,7 @@ export default function BesarPage() {
                       const rowHits = MARKET_SESSIONS[activeMarket].filter((t) => isBesar(row[drawKey(t)] ?? null) === true).length;
                       return (
                       <tr key={row.drawDate} className="group border-t border-border/50 hover:bg-muted/20">
-                        <td className="sticky left-0 z-10 group-hover:bg-muted/20 border-r border-border/30 transition-colors px-1 py-1 font-medium text-foreground sm:px-3 sm:py-2 w-[52px] sm:w-auto" style={{ backgroundColor: "var(--color-bg-card, rgb(9, 9, 11))" }}>
+                        <td className="sticky left-0 z-10 bg-card group-hover:bg-muted/50 border-r border-border/30 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)] transition-colors px-1 py-1 font-medium text-foreground sm:px-3 sm:py-2 w-[52px] sm:w-auto" style={{ backgroundColor: "var(--color-bg-card, rgb(9, 9, 11))" }}>
                           <div className="whitespace-nowrap">
                             <span className="hidden sm:inline text-xs text-muted-foreground mr-1">{row.dayName}</span>
                             <span className="hidden sm:inline">{row.drawDate}</span>

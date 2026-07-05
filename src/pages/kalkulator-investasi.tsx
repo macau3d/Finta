@@ -312,11 +312,11 @@ export default function KalkulatorInvestasi() {
                 </p>
               </div>
             ) : (
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm text-left">
+              <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-muted-foreground/20">
+                <table className="w-full text-sm text-left table-auto min-w-[600px]">
                   <thead className="text-xs text-muted-foreground uppercase bg-black/5 dark:bg-white/5">
                     <tr>
-                      <th className="px-6 py-4 font-black tracking-wider text-center">Putaran</th>
+                      <th className="sticky left-0 z-10 bg-muted-header px-6 py-4 font-black tracking-wider text-center border-r border-border/40 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]" style={{ backgroundColor: "var(--color-bg-muted-header, rgb(24, 24, 27))" }}>Putaran</th>
                       <th className="px-6 py-4 font-black tracking-wider">Bet (Per Nomor)</th>
                       <th className="px-6 py-4 font-black tracking-wider">Modal Putaran</th>
                       <th className="px-6 py-4 font-black tracking-wider">Total Modal (Kumulatif)</th>
@@ -333,7 +333,7 @@ export default function KalkulatorInvestasi() {
                         key={row.putaran} 
                         className="hover:bg-black/5 dark:hover:bg-white/5 transition-colors group"
                       >
-                        <td className="px-6 py-4 font-bold text-center">
+                        <td className="sticky left-0 z-10 bg-card group-hover:bg-muted/50 px-6 py-4 font-bold text-center border-r border-border/40 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
                           <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary text-xs">
                             {row.putaran}
                           </span>

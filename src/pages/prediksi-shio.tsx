@@ -358,11 +358,11 @@ export default function PrediksiShioPage() {
                  Tabel Analisis Lengkap (Peringkat 4 - 12)
                </div>
                
-               <div className="overflow-x-auto">
-                 <table className="w-full text-sm text-left border-collapse">
+               <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-muted-foreground/20">
+                 <table className="w-full text-sm text-left border-collapse min-w-[500px]">
                    <thead>
                      <tr className="border-b border-black/10 dark:border-white/10">
-                       <th className="px-4 py-3 font-bold text-muted-foreground">Shio</th>
+                       <th className="sticky left-0 z-10 bg-muted-header px-4 py-3 font-bold text-muted-foreground shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]" style={{ backgroundColor: "var(--color-bg-muted-header, rgb(24, 24, 27))" }}>Shio</th>
                        <th className="px-4 py-3 font-bold text-muted-foreground text-center">Frekuensi</th>
                        <th className="px-4 py-3 font-bold text-muted-foreground text-center">Gap Saat Ini</th>
                        <th className="px-4 py-3 font-bold text-muted-foreground text-center">Max Gap</th>
@@ -372,7 +372,7 @@ export default function PrediksiShioPage() {
                    <tbody>
                      {analysis.ranked.slice(3).map((shio, i) => (
                        <tr key={shio.name} className="border-b border-black/5 dark:border-white/5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                         <td className="px-4 py-3 font-bold flex items-center gap-2">
+                         <td className="sticky left-0 z-10 bg-card px-4 py-3 font-bold flex items-center gap-2 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
                            <span className="text-[10px] w-4 text-muted-foreground/50">{i + 4}.</span> 
                            {shio.name}
                          </td>

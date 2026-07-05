@@ -115,11 +115,11 @@ export default function PaitoPage() {
         onMouseUp={() => setIsMouseDown(false)}
         onMouseLeave={() => setIsMouseDown(false)}
       >
-        <div className="overflow-x-auto select-none">
-          <table className="w-full text-center border-collapse">
+        <div className="overflow-x-auto select-none scrollbar-thin scrollbar-thumb-muted-foreground/20">
+          <table className="w-full text-center border-collapse min-w-[500px]">
             <thead>
               <tr className="bg-black/5 dark:bg-white/5 text-[10px] sm:text-xs uppercase tracking-wider text-muted-foreground border-b border-black/10 dark:border-white/10">
-                <th className="p-3 sm:p-4 border-r border-black/10 dark:border-white/10 w-24 sm:w-32 font-semibold">Tanggal</th>
+                <th className="sticky left-0 z-10 bg-muted-header p-3 sm:p-4 border-r border-black/10 dark:border-white/10 w-24 sm:w-32 font-semibold shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]" style={{ backgroundColor: "var(--color-bg-muted-header, rgb(24, 24, 27))" }}>Tanggal</th>
                 {MARKET_SESSIONS[activeMarket].map(t => (
                   <th key={MARKET_SESSION_LABELS[activeMarket][t]} className="p-3 sm:p-4 border-r border-black/10 dark:border-white/10 font-semibold w-16 sm:w-20 last:border-0">
                     {MARKET_SESSION_LABELS[activeMarket][t]}
@@ -144,7 +144,7 @@ export default function PaitoPage() {
               ) : (
                 rows.map((row, rowIdx) => (
                   <tr key={rowIdx} className="border-b border-black/5 dark:border-white/5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200">
-                    <td className="p-2 border-r border-black/5 dark:border-white/5 text-[10px] sm:text-xs font-mono text-muted-foreground whitespace-nowrap">
+                    <td className="sticky left-0 z-10 bg-card p-2 border-r border-black/5 dark:border-white/5 text-[10px] sm:text-xs font-mono text-muted-foreground whitespace-nowrap shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
                       {row.drawDate}
                     </td>
                     {MARKET_SESSIONS[activeMarket].map((t, colIdx) => {

@@ -391,28 +391,29 @@ export default function RiwayatPrediksiPage() {
 
           {/* Table — desktop */}
           <div className="hidden md:block rounded-[2rem] glass-card shadow-sm overflow-hidden border border-black/10 dark:border-white/10">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
-                  <th className="px-5 py-4 text-left text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Tanggal Prediksi</th>
-                  <th className="px-3 py-4 text-left text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Sesi</th>
-                  <th className="px-3 py-4 text-left text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Tgl. Draw</th>
-                  <th className="px-3 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Prediksi / Aktual</th>
-                  <th className="px-3 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">BBFS 5D Posisi</th>
-                  <th className="px-3 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Skor</th>
-                  <th className="px-3 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Conf.</th>
-                  <th className="px-3 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Signal</th>
-                  <th className="px-5 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Hapus</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-black/10 dark:divide-white/10">
-                {filtered.map((p) => {
-                  const actualDigits = p.actual4d ? p.actual4d.split("") : null;
-                  return (
-                    <tr key={p.id} className={cn("transition-colors hover:bg-black/5 dark:bg-white/5", p.digitScore === 4 && "bg-green-500/10")}>
-                      <td className="px-5 py-4 font-mono text-xs text-muted-foreground">
-                        {new Date(p.createdAt).toLocaleString("id-ID", { day: "2-digit", month: "short", year: "2-digit", hour: "2-digit", minute: "2-digit" })}
-                      </td>
+            <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-muted-foreground/20">
+              <table className="w-full text-sm min-w-[800px]">
+                <thead>
+                  <tr className="border-b border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
+                    <th className="sticky left-0 z-10 bg-muted-header px-5 py-4 text-left text-[10px] font-bold uppercase tracking-wider text-muted-foreground shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]" style={{ backgroundColor: "var(--color-bg-muted-header, rgb(24, 24, 27))" }}>Tanggal Prediksi</th>
+                    <th className="px-3 py-4 text-left text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Sesi</th>
+                    <th className="px-3 py-4 text-left text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Tgl. Draw</th>
+                    <th className="px-3 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Prediksi / Aktual</th>
+                    <th className="px-3 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">BBFS 5D Posisi</th>
+                    <th className="px-3 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Skor</th>
+                    <th className="px-3 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Conf.</th>
+                    <th className="px-3 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Signal</th>
+                    <th className="px-5 py-4 text-center text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Hapus</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-black/10 dark:divide-white/10">
+                  {filtered.map((p) => {
+                    const actualDigits = p.actual4d ? p.actual4d.split("") : null;
+                    return (
+                      <tr key={p.id} className={cn("transition-colors hover:bg-black/5 dark:bg-white/5", p.digitScore === 4 && "bg-green-500/10")}>
+                        <td className="sticky left-0 z-10 bg-card px-5 py-4 font-mono text-xs text-muted-foreground shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
+                          {new Date(p.createdAt).toLocaleString("id-ID", { day: "2-digit", month: "short", year: "2-digit", hour: "2-digit", minute: "2-digit" })}
+                        </td>
                       <td className="px-3 py-4">
                         <span className={cn("rounded-lg px-2 py-1 font-mono text-[10px] font-bold", SESSION_COLORS[p.session] ?? "bg-black/10 dark:bg-white/10 text-muted-foreground")}>
                           {MARKET_SESSION_LABELS[activeMarket][p.session] ?? p.session}
@@ -485,6 +486,7 @@ export default function RiwayatPrediksiPage() {
                 })}
               </tbody>
             </table>
+            </div>
           </div>
 
           {/* Cards — mobile */}
